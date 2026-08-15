@@ -1,0 +1,25 @@
+# Environment variables and secrets (NEVER commit these)
+.env
+.env.local
+.env.development
+.env.production
+*.pem
+
+# Dependencies
+node_modules/
+/vendor/
+
+# Build outputs and logs
+dist/
+build/
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE and text editor configurations
+.vscode/
+.idea/
+.zed/
+*.suo

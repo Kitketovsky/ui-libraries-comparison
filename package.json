@@ -1,0 +1,39 @@
+{
+	"name": "ui-libraries-comparison",
+	"version": "1.0.0",
+	"description": "",
+	"keywords": [],
+	"license": "ISC",
+	"author": "",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"fmt": "oxfmt . --disable-nested-config",
+		"fmt:check": "oxfmt --check . --disable-nested-config",
+		"lint": "oxlint",
+		"lint:fix": "oxlint --fix",
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"husky": "^9.1.7",
+		"lint-staged": "^17.3.0",
+		"oxfmt": "^0.63.0",
+		"oxlint": "^1.78.0"
+	},
+	"lint-staged": {
+		"*": "oxfmt --no-error-on-unmatched-pattern",
+		"*.{js,jsx,ts,tsx,mjs,cjs}": "pnpm run lint"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "^11.20.0",
+			"onFail": "download"
+		},
+		"runtime": {
+			"name": "node",
+			"version": "^26.7.0",
+			"onFail": "download"
+		}
+	}
+}
